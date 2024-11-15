@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Garden Life - Garden Plants</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            width: 100%;
+            height: 100%px; 
+            overflow: hidden;
+        }
+        .image-container {
+            position: relative;
+            height: 200px; 
+        }
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+        .image-container img.back {
+            opacity: 0;
+        }
+        .image-container:hover img.front {
+            opacity: 0;
+        }
+        .image-container:hover img.back {
+            opacity: 1;
+        }
+        .line-through {
+            text-decoration: line-through;
+            color: red;
+        }
+        .rating {
+            color: green; 
+        }
+        .heart-button {
+            background: none;
+            border: none;
+            color: red;
+        }
+        .add-to-cart {
+            margin-top: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="home.html">My Garden</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><img src="images/home icon.png" alt="" height="20px" width="20px"> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><img src="images/about icon.png" alt="" height="20px" width="20px"> About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="plantsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <img src="images/plants icon.png" alt="" height="20px" width="20px"> Plants</a>
+                    <div class="dropdown-menu" aria-labelledby="plantsDropdown">
+                        <a class="dropdown-item" href="vegetable-gallery.html"><img src="images/vegetable icon.png" alt="" height="20px" width="20px"> Vegetable Gallery</a>
+                        <a class="dropdown-item" href="fruits-gallery.html"><img src="images/fruit icon.png" alt="" height="20px" width="20px"> Fruit Gallery</a>
+                        <a class="dropdown-item" href="flower-gallery.html"><img src="images/flower icon.png" alt="" height="20px" width="20px"> Flower Gallery</a>
+                        <a class="dropdown-item" href="indoorplants.html"><img src="images/indoor icon.png" alt="" height="20px" width="20px"> Indoor Plants</a>
+                        <a class="dropdown-item" href="outdoorplants.html"><img src="images/indoor icon.png" alt="" height="20px" width="20px"> Outdoor Plants</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <img src="images/shop icon.png" alt="" height="20px" width="20px"> Shop</a>
+                    <div class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <a class="dropdown-item" href="gardening tools.html"><img src="images/gar tools.png" alt="" height="20px" width="20px"> Garden Tools</a>
+                        <a class="dropdown-item" href="garden plants.html"><img src="images/grd plants.png" alt="" height="20px" width="20px"> Plants & Seeds</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><img src="images/contact icon.png" alt="" height="20px" width="20px"> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><img src="images/login icon.png" alt="" height="20px" width="20px"> Login</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="#" method="GET">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Plants..." aria-label="Search" name="query">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/carrot.jpg" alt="carrot">
+                    <img class="back" src="images/beetroot seed.jpeg" alt="carrot seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Carrot</h5>
+                    <p class="line-through">₹100</p>
+                    <p>₹80</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/broccoli.jpg" alt="broccoli">
+                    <img class="back" src="images/broccoli seed.jpeg" alt="broccoli seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Broccoli</h5>
+                    <p class="line-through">₹90</p>
+                    <p>₹70</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/spinach.jpg" alt="spinach">
+                    <img class="back" src="images/beetroot seed.jpeg" alt="spinach seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Spinach</h5>
+                    <p class="line-through">₹120</p>
+                    <p>₹90</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/tomato.jpg" alt="tomato">
+                    <img class="back" src="images/broccoli seed.jpeg" alt="tomato seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Tomato</h5>
+                    <p class="line-through">₹80</p>
+                    <p>₹60</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/potato.jpg" alt="potato">
+                    <img class="back" src="images/beetroot seed.jpeg" alt="potato seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Potato</h5>
+                    <p class="line-through">₹50</p>
+                    <p>₹40</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/Cauliflower.jpg" alt="cauliflower">
+                    <img class="back" src="images/broccoli seed.jpeg" alt="Cauliflower seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cauliflower</h5>
+                    <p class="line-through">₹55</p>
+                    <p>₹45</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/Eggplant.jpg" alt="Eggplant">
+                    <img class="back" src="images/beetroot seed.jpeg" alt="Egg plant seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Egg Plant</h5>
+                    <p class="line-through">₹40</p>
+                    <p>₹30</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/Radish.jpg" alt="radish">
+                    <img class="back" src="images/broccoli seed.jpeg" alt="radish seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Radish</h5>
+                    <p class="line-through">₹50</p>
+                    <p>₹40</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/Asparagus.jpg" alt="Asparagus">
+                    <img class="back" src="images/beetroot seed.jpeg" alt="asparagus seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Asparagus</h5>
+                    <p class="line-through">₹80</p>
+                    <p>₹60</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/Kale.jpg" alt="Kale">
+                    <img class="back" src="images/broccoli seed.jpeg" alt="Kale seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Kale</h5>
+                    <p class="line-through">₹90</p>
+                    <p>₹70</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/Beets.jpg" alt="beets">
+                    <img class="back" src="images/beetroot seed.jpeg" alt="beet root seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Beets</h5>
+                    <p class="line-through">₹60</p>
+                    <p>₹50</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/Brussels Sprouts.jpg" alt="sprouts">
+                    <img class="back" src="images/broccoli seed.jpeg" alt="sprouts seed">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Brussels Sprouts</h5>
+                    <p class="line-through">₹120</p>
+                    <p>₹90</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/rose.jpg" alt="Rose">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Rose Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Rose</h5>
+                    <p class="line-through">₹200</p>
+                    <p>₹150</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/tulip.jpg" alt="Tulip">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Tulip Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Tulip</h5>
+                    <p class="line-through">₹180</p>
+                    <p>₹130</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/daisy.jpg" alt="Daisy">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Daisy Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Daisy</h5>
+                    <p class="line-through">₹90</p>
+                    <p>₹70</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/sunflower.jpg" alt="Sunflower">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Sunflower Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Sunflower</h5>
+                    <p class="line-through">₹120</p>
+                    <p>₹90</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/orchid.jpg" alt="Orchid">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Orchid Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Orchid</h5>
+                    <p class="line-through">₹250</p>
+                    <p>₹200</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/lily.jpg" alt="Lily">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Lily Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Lily</h5>
+                    <p class="line-through">₹150</p>
+                    <p>₹120</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/marigold.webp" alt="Marigold">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Marigold Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Marigold</h5>
+                    <p class="line-through">₹80</p>
+                    <p>₹60</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/hibiscus.jpg" alt="Hibiscus">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Hibiscus Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Hibiscus</h5>
+                    <p class="line-through">₹100</p>
+                    <p>₹75</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/peony.jpg" alt="Peony">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Peony Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Peony</h5>
+                    <p class="line-through">₹300</p>
+                    <p>₹250</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/daffodil.jpg" alt="Daffodil">
+                    <img class="back" src="images/flowers seeds.jpeg" alt="Daffodil Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Daffodil</h5>
+                    <p class="line-through">₹120</p>
+                    <p>₹90</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/apple.jpg" alt="Apple">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Apple Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Apple</h5>
+                    <p class="line-through">₹100</p>
+                    <p>₹80</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/banana.jpg" alt="Banana">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Banana Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Banana</h5>
+                    <p class="line-through">₹50</p>
+                    <p>₹40</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/orange.jpg" alt="Orange">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Orange Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Orange</h5>
+                    <p class="line-through">₹60</p>
+                    <p>₹50</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/grape.jpg" alt="Grapes">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Grapes Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Grapes</h5>
+                    <p class="line-through">₹120</p>
+                    <p>₹100</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/strawberry.jpg" alt="Strawberry">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Strawberry Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Strawberry</h5>
+                    <p class="line-through">₹150</p>
+                    <p>₹120</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/mango.jpg" alt="Mango">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Mango Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Mango</h5>
+                    <p class="line-through">₹80</p>
+                    <p>₹70</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/pineapple.jpg" alt="Pineapple">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Pineapple Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Pineapple</h5>
+                    <p class="line-through">₹90</p>
+                    <p>₹75</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/pear.jpg" alt="Pear">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Pear Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Pear</h5>
+                    <p class="line-through">₹70</p>
+                    <p>₹60</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/peach.jpg" alt="Peach">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Peach Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Peach</h5>
+                    <p class="line-through">₹120</p>
+                    <p>₹100</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <div class="image-container">
+                    <img class="front" src="images/cherry.jpg" alt="Cherry">
+                    <img class="back" src="images/fruits seeds.jpeg" alt="Cherry Details">
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Cherry</h5>
+                    <p class="line-through">₹150</p>
+                    <p>₹130</p>
+                    <span class="rating">⭐⭐⭐⭐⭐</span><br>
+                    <button class="btn btn-success btn-sm add-to-cart">Add to Cart</button>
+                    <button class="heart-button mt-2"><i class="fas fa-heart"></i></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<footer class="footer text-center">
+    <div class="container">
+        <p>&copy; 2024 Garden Life. All Rights Reserved.</p>
+        <p>Contact: info@gardenlife.com | Phone: (123) 456-7890</p>
+        <div class="social-media">
+            <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook" height="30px"></a>
+            <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter" height="30px"></a>
+            <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram" height="30px"></a>
+        </div>
+
+        <div class="newsletter-signup">
+            <p>Subscribe to our newsletter for gardening tips and updates!</p>
+            <form action="#" method="post">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

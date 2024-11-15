@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Garden Life - Garden Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tool-card {
+            transition: transform 0.3s;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-bottom: 30px; 
+            height: 400px; 
+        }
+
+        .tool-card:hover {
+            transform: scale(1.05);
+        }
+
+        .tool-card img {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            transition: transform 0.3s;
+        }
+
+        .tool-card:hover img {
+            transform: scale(1.05); 
+        }
+
+        .card-body {
+            height: 200px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+        }
+    </style>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="home.html">My Garden</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html"><img src="images/home icon.png" alt="" height="20px" width="20px"> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html"><img src="images/about icon.png" alt="" height="20px" width="20px"> About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="plantsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <img src="images/plants icon.png" alt="" height="20px" width="20px"> Plants</a>
+                    <div class="dropdown-menu" aria-labelledby="plantsDropdown">
+                        <a class="dropdown-item" href="vegetable-gallery.html"><img src="images/vegetable icon.png" alt="" height="20px" width="20px"> Vegetable Gallery</a>
+                        <a class="dropdown-item" href="fruits-gallery.html"><img src="images/fruit icon.png" alt="" height="20px" width="20px"> Fruit Gallery</a>
+                        <a class="dropdown-item" href="flower-gallery.html"><img src="images/flower icon.png" alt="" height="20px" width="20px"> Flower Gallery</a>
+                        <a class="dropdown-item" href="indoorplants.html"><img src="images/indoor icon.png" alt="" height="20px" width="20px"> Indoor Plants</a>
+                        <a class="dropdown-item" href="outdoorplants.html"><img src="images/indoor icon.png" alt="" height="20px" width="20px"> Outdoor Plants</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       <img src="images/shop icon.png" alt="" height="20px" width="20px"> Shop</a>
+                    <div class="dropdown-menu" aria-labelledby="shopDropdown">
+                        <a class="dropdown-item" href="gardening tools.html"><img src="images/gar tools.png" alt="" height="20px" width="20px"> Garden Tools</a>
+                        <a class="dropdown-item" href="garden plants.html"><img src="images/grd plants.png" alt="" height="20px" width="20px"> Plants & Seeds</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html"><img src="images/contact icon.png" alt="" height="20px" width="20px"> Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"><img src="images/login icon.png" alt="" height="20px" width="20px"> Login</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="#" method="GET">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search Tools..." aria-label="Search" name="query">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/Hand Trowel.jpg" class="card-img-top" alt="Hand Trowel">
+                    <div class="card-body">
+                        <h5 class="card-title">Hand Trowel</h5>
+                        <p class="card-text">A small, handheld tool used for digging, planting, and transferring soil.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.5</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/Pruning Shear.jpg" class="card-img-top" alt="Pruning Shears">
+                    <div class="card-body">
+                        <h5 class="card-title">Pruning Shears</h5>
+                        <p class="card-text">Also known as secateurs, used for trimming and shaping plants.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.8</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/gar fork.jpg" class="card-img-top" alt="Garden Fork">
+                    <div class="card-body">
+                        <h5 class="card-title">Garden Fork</h5>
+                        <p class="card-text">Used for loosening, lifting, and turning over soil.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.6</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/Spade.jpg" class="card-img-top" alt="Spade">
+                    <div class="card-body">
+                        <h5 class="card-title">Spade</h5>
+                        <p class="card-text">Used for digging and edging, with a flat blade.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.7</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/Rake.jpg" class="card-img-top" alt="Rake">
+                    <div class="card-body">
+                        <h5 class="card-title">Rake</h5>
+                        <p class="card-text">Used for collecting leaves and debris or leveling soil.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.4</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/hoe.jpeg" class="card-img-top" alt="Hoe">
+                    <div class="card-body">
+                        <h5 class="card-title">Hoe</h5>
+                        <p class="card-text">Used for weeding and breaking up soil with a flat blade.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.3</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/Watering Can.jpg" class="card-img-top" alt="Watering Can">
+                    <div class="card-body">
+                        <h5 class="card-title">Watering Can</h5>
+                        <p class="card-text">A container with a spout used for watering plants manually.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.2</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/Wheelbarrow.jpg" class="card-img-top" alt="Wheelbarrow">
+                    <div class="card-body">
+                        <h5 class="card-title">Wheelbarrow</h5>
+                        <p class="card-text">A hand-propelled vehicle for transporting soil and materials.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.1</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card tool-card">
+                    <img src="images/Glove.jpg" class="card-img-top" alt="Gloves">
+                    <div class="card-body">
+                        <h5 class="card-title">Gloves</h5>
+                        <p class="card-text">Protective wear for hands to prevent injuries and blisters.</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-success">Add to Cart</button>
+                            <div>
+                                <span class="badge badge-success">4.5</span>
+                                <button class="btn btn-light btn-sm">❤️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; 2024 Garden Life. All Rights Reserved.</p>
+            <p>Contact: info@gardenlife.com | Phone: (123) 456-7890</p>
+            
+            <div class="social-media">
+                <a href="#" class="social-icon"><img src="images/facebook.png" alt="Facebook" height="30px"></a>
+                <a href="#" class="social-icon"><img src="images/twitter.png" alt="Twitter" height="30px"></a>
+                <a href="#" class="social-icon"><img src="images/instagram.png" alt="Instagram" height="30px"></a>
+            </div>
+    
+            <div class="newsletter-signup">
+                <p>Subscribe to our newsletter for gardening tips and updates!</p>
+                <form action="#" method="post">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+    
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
